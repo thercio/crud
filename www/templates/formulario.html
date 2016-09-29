@@ -1,0 +1,25 @@
+<ion-view view-title="Cadastro">
+  <ion-content ng-controller="FormCtrl">
+    <div class="list card">
+    	<form name="">
+    		<div class="list">
+			  <label class="item item-input item-stacked-label">
+			    <span class="input-label">Nome</span>
+			    <input type="text" placeholder="Thercio" ng-model="estudante.nome" required>
+			  </label>
+			  <label class="item item-input item-stacked-label">
+			    <span class="input-label">Email</span>
+			    <input type="Email" placeholder="ther@ther.com" ng-model="estudante.email" required>
+			  </label>
+			  <label class="item item-input item-stacked-label">
+			    <span class="input-label">Senha</span>
+			    <input type="password" placeholder="123123" ng-model="estudante.senha" required>
+			  </label>
+			</div>
+    	</form>
+    </div>
+    <div class="padding">
+    	<button class="button button-block button-positive" ng-click="insert(estudante)">Salvar</button>
+  	</div>
+  </ion-content>
+</ion-view>

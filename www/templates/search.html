@@ -1,0 +1,18 @@
+<ion-view view-title="Registros">
+  <ion-content ng-controller="LoadCtrl">
+
+  	<ion-refresher pulling-icon="ion-refresh" on-refresh="doRefresh()">
+	 </ion-refresher>
+     <div class="padding">
+    	<ion-list>
+            <ion-item ng-click="click(estudante)" ng-repeat="estudante in estudantes" type="item-text-wrap">
+                <h2>{{estudante.nome}}</h2>
+                <p>{{estudante.email}}</p>
+            </ion-item>
+        </ion-list>
+        <div ng-if="estudantes === undefined" class="no-results">
+            <p style="padding: 10px">Não há nenhum registro</p>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>
